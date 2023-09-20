@@ -1,0 +1,151 @@
+body {
+    background-color: black;
+    color:white;
+  }
+  
+  .intro__heading {
+    text-indent: 10px;
+  }
+  
+  p {
+    color:black;
+  }
+  
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: transparent;
+  }
+  
+  li {
+    float: right;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover {
+    background-color: lightslategray;
+  }
+  
+  *, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .intro__container {
+    display: flex;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    width: min(100% - 2rem, 1300px);
+    min-height: 70vh;
+    margin-inline: auto;
+    grid-gap: 3rem;
+    padding: 2rem;
+    animation: fade-in-right 1.5s forwards;
+  }
+  
+  .intro__heading {
+    font-size: 4rem;
+    font-family: 'IBM Plex Sans', sans-serif;
+    max-width: 25ch;
+    margin-bottom: 2rem;
+    color: black;
+  }
+  
+  .intro__subheading {
+    font-size: 1.75rem;
+    font-style: italic;
+    max-width: 11ch;
+    color: black;
+    border-style: solid;
+    margin-bottom: 2rem;
+  }
+  
+  .tony__image > img {
+    width: 400px;
+    height: 425px;
+    border: solid lightslategrey 5px;
+  }
+  
+  .content {
+    display: grid;
+    grid-template-columns: repeat(2);
+    justify-content: center;
+    width: min(100% - 2rem, 1300px);
+    min-height: 70vh;
+    margin-inline: auto;
+    grid-gap: 0rem;
+    padding: 0rem;
+    animation: fade-in-right 1.5s forwards;
+    grid-template-areas:
+    "content-img1 content_img2"
+    "content_img3 content_img4"
+  }
+  
+  .content-img1 {
+    grid-area: content-img1;
+  }
+  
+  .content-img2 {
+    grid-area: content-img2;
+  }
+  
+  .content-img3 {
+    grid-area: content-img3;
+  }
+  
+  .content-img4 {
+    grid-area: content-img4;
+  }
+  
+  footer {
+    background-color: black;
+    color: white;
+    text-align: right;
+    padding:10rem;
+  }
+  
+  @keyframes fade-in-right {
+    0% {
+      transform: translateX(-10%);
+      opacity: 0;
+    }
+   
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @media (prefers-reduced-motion) {
+    .intro__container {
+      animation: none;
+    }
+  
+  @media (max-width: 830px) {
+    .intro__subheading {
+      max-width: 25ch;
+    }
+  }
+  
+  @media (max-width: 770px) {
+    .intro__container {
+      flex-direction: column-reverse;
+      align-items: center;
+      gap: 1.5rem;
+    }
+  
+    .intro__text {
+      text-align: center;
+    }
+  }
